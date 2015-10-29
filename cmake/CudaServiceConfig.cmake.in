@@ -1,0 +1,15 @@
+# - Config file for the CudaService package
+# It defines the following variables
+#  CudaService_INCLUDE_DIRS - include directories
+#  CudaService_LIBRARIES    - libraries to link against
+#  CudaService_LIBRARY_DIR  - CudaService library dir
+#  CudaService_BINARY_DIR   - binary directory
+
+# Compute paths
+get_filename_component(CudaService_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+get_filename_component(CudaService_INCLUDE_DIRS "${CudaService_CMAKE_DIR}/../include" ABSOLUTE)
+get_filename_component(CudaService_BINARY_DIR "${CudaService_CMAKE_DIR}/../bin" ABSOLUTE)
+get_filename_component(CudaService_LIBRARY_DIR "${CudaService_CMAKE_DIR}/../lib" ABSOLUTE)
+
+ADD_LIBRARY(examplelibrary SHARED IMPORTED)
